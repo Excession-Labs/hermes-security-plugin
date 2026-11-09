@@ -16,7 +16,7 @@ Use this skill when a person asks whether a public site sets the common security
 
 The `pts` server (penetrationtestservices.com):
 
-- `check_security_headers` takes a `url`. It fetches the page once and returns pass, warn, fail and info results for HTTPS, HSTS, CSP, clickjacking protection and other headers. It is read-only. The service allows 12 checks per minute per IP address.
+- `check_security_headers` takes a `url`. It fetches the page and returns pass, warn, fail and info results for HTTPS, HSTS, CSP, clickjacking protection and other headers. It is read-only. The service allows 12 checks per minute per IP address.
 - `search_site` and `get_page` read the site's guides as Markdown.
 - `how_to_contact` returns the contact form URL and email address. It sends nothing.
 - `request_pentest` sends a real request to Excession Labs. It needs an agent key and the person's consent. Do not call it unless the person asked you to request a test, and tell them what you will send first.
@@ -29,7 +29,7 @@ The `pc` server (pentestcompare.com):
 
 ## Steps for a header check
 
-1. Ask for the URL if the person did not give one. Only check sites the person may look at. A header check sends one ordinary GET request.
+1. Ask for the URL if the person did not give one. Only check sites the person may look at. A header check sends one GET request per redirect.
 2. Call `check_security_headers`.
 3. Report the counts first, then each fail and warn with its note.
 4. Say what the check cannot show. It reads one response. It does not prove the site is secure, and a pass on one header says nothing about the rest of the application.
