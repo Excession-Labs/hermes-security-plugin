@@ -24,7 +24,7 @@ Start a new session. No API key is needed for header checks or provider data.
 - Network calls: the tools call `https://penetrationtestservices.com/mcp` and `https://pentestcompare.com/mcp`. A header check sends the URL you give to penetrationtestservices.com, which then fetches that URL with one GET request per redirect.
 - `request_pentest` sends a contact request (name, email, targets) to Excession Labs. It needs an agent key from `POST https://penetrationtestservices.com/agent/auth`, and the plugin does not hold one. Both servers are marked `trust: untrusted`, so Hermes asks before each call that is not read-only.
 - The plugin reads no files outside its own directory, runs no shell command and starts no background process. It stores no credential and sends no telemetry.
-- It does not update itself.
+- It does not update itself. The tool list comes from the two remote servers at runtime, so the pinned commit does not cover it.
 
 ## Check it
 
