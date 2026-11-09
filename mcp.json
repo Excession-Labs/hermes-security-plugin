@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "pts": {
+      "type": "streamable-http",
+      "url": "https://penetrationtestservices.com/mcp"
+    },
+    "pc": {
+      "type": "streamable-http",
+      "url": "https://pentestcompare.com/mcp"
+    }
+  }
+}

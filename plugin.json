@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "hermes-security-plugin",
+  "version": "0.1.0",
+  "description": "Check the security headers of a public URL and look up sourced penetration testing provider data, through the public remote MCP servers of penetrationtestservices.com and pentestcompare.com.",
+  "author": {
+    "name": "Excession Labs",
+    "url": "https://excessionlabs.ai"
+  },
+  "homepage": "https://github.com/Excession-Labs/hermes-security-plugin",
+  "repository": "https://github.com/Excession-Labs/hermes-security-plugin",
+  "license": "MIT",
+  "keywords": ["security", "http-headers", "pentest", "mcp"],
+  "extensions": {
+    "com.nousresearch.hermes": {
+      "servers": {
+        "pts": { "trust": "untrusted" },
+        "pc": { "trust": "untrusted" }
+      }
+    }
+  }
+}
